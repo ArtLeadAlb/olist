@@ -1,0 +1,13 @@
+# Cole estes blocos no final do seu pyproject.toml (não substitua o arquivo).
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+pythonpath = ["."]
+
+[tool.coverage.run]
+source = ["."]
+omit = ["test/*", "app.py", "ui.py", ".venv/*"]
+
+[tool.coverage.report]
+fail_under = 60
+show_missing = true
